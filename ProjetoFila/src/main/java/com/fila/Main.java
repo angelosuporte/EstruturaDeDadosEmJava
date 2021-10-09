@@ -5,11 +5,12 @@ public class Main {
 
         Fila fila = new Fila();
 
-        fila.enqueue(new No("primeiro"));
-        fila.enqueue(new No("segundo"));
-        fila.enqueue(new No("terceiro"));
-        fila.enqueue(new No("Fui"));
-        fila.enqueue(new No("quinto"));
+        fila.enqueue("primeiro");
+        fila.enqueue("segundo");
+        fila.enqueue("terceiro");
+        fila.enqueue("Fui");
+        fila.enqueue("quinto");
+        fila.enqueue("1");
         System.out.println(fila);
 
         System.out.println(fila.first());
