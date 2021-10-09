@@ -1,0 +1,50 @@
+package com.listaencadeada;
+
+
+public class ListaEncadeada<T> {
+
+    No<T> referenciaEntrada;
+
+    public ListaEncadeada(){
+        this.referenciaEntrada = null;
+    }
+
+    public void add (T conteudo){
+        No<T> novoNo = new No<>(conteudo);
+        if(this.isEmpty()){
+            referenciaEntrada = novoNo;
+            return;
+        }
+
+        No<T> noAuxiliar = referenciaEntrada;
+        for (int i = 0; i < this.size()-1; i++){
+            noAuxiliar = noAuxiliar.getProximoNo();
+        }
+
+        noAuxiliar.setProximoNo(novoNo);
+    }
+
+    public int size(){
+        int tamanhoLista = 0;
+        No<T> referenciaAux = referenciaEntrada;
+        while (true) {
+            if (referenciaAux != null) {
+                tamanhoLista++;
+//verificando se o próximo No é nulo se for nullo o while vai parar,
+//mas se a lista estiver vazia não entrará neste while
+                if(referenciaAux.getProximoNo() !=null){
+                    referenciaAux = referenciaAux.getProximoNo();
+                }else {
+                    break;
+                }
+            } else {
+                break;
+            }
+        }
+        return  tamanhoLista;
+    }
+
+    public boolean isEmpty(){
+        return referenciaEntrada == null? true : false;
+    }
+}
