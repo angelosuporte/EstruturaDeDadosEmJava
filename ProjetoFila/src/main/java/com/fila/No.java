@@ -1,18 +1,19 @@
 package com.fila;
 
-public class No {
-    private Object object;
+//Usando T como Generics
+public class No<T> {
+    private T object;
     private No referenciaNo;
 
     public No(){
     }
 
-    public No(Object object) {
+    public No(T object) {
         this.referenciaNo = null;
         this.object = object;
     }
 
-    public Object getObject() {
+    public T getObject() {
         return object;
     }
 
@@ -20,7 +21,7 @@ public class No {
         return referenciaNo;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 
