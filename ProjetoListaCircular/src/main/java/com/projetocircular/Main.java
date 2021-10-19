@@ -19,10 +19,13 @@ public class Main {
 
         System.out.println("Verificando loop por indice usando método get");
 
-        System.out.println(circular.get(0));
-        System.out.println(circular.get(1));
-        System.out.println(circular.get(2));
-        System.out.println(circular.get(3));
-        
+     //   System.out.println(circular.get(0));
+     //   System.out.println(circular.get(1));
+     //   System.out.println(circular.get(2));
+     //   System.out.println(circular.get(3));
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println(circular.get(i));
+        }
     }
 }
