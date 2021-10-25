@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println(carros.remove(2));
         System.out.println(carros);
-        
+
         System.out.println(carros.isEmpty());
         System.out.println(carros.size());
     }
