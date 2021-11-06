@@ -9,6 +9,10 @@ public class Carro implements Comparable<Carro> {
         this.marca = marca;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,13 +34,18 @@ public class Carro implements Comparable<Carro> {
     }
 
 //Vai comparar pelo tamanho da String
+//    @Override
+//    public int compareTo(Carro o) {
+//        if(this.marca.length() < o.marca.length()){
+//                      return -1;
+//        }else if(this.marca.length() > o.marca.length()){
+//            return 1;
+//        }
+//        return 0;
+// }
+
     @Override
     public int compareTo(Carro o) {
-        if(this.marca.length() < o.marca.length()){
-            return -1;
-        }else if(this.marca.length() > o.marca.length()){
-            return 1;
-        }
-        return 0;
-  }
+        return this.getMarca().compareTo(o.getMarca());
+    }
 }
